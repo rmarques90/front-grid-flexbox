@@ -1,0 +1,138 @@
+<html>
+<head>
+<style>
+  html, body {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    background: purple;
+    display:grid;
+    grid-template: 20vh 70vh 10vh/1fr 8fr;
+    grid-gap: 2px;
+
+    grid-template-areas: "h h"
+                         "menu m"  
+                         "f f";
+  }
+
+  header {
+    background: red !important;
+    grid-area: h;
+  }
+
+  menu {
+    background: green !important;
+    grid-area: menu;
+  }
+
+  .grid-menu {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+  }
+
+  .grid-menu .m1, .m2, .m3 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items:center;
+  }
+  .grid-menu .m1 {
+    background: grey;
+  }
+  .grid-menu .m2 {
+    background: white;
+  }
+
+  .grid-menu .m3 {
+    background: yellow;
+  }
+
+  main {
+    background: blue !important;
+    grid-area: m;
+  }
+
+  footer {
+    background: black !important;
+    grid-area: f;
+  }
+
+  .main-content {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+  }
+
+  .main-content .received {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding:10px;
+    background: green;
+    max-width:30%;
+    margin-left:20px;
+    margin-bottom:5px;
+  }
+
+  .main-content .sent {
+    display: flex;
+    background: grey;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding:10px;
+    max-width:30%;
+    align-self:flex-end;
+    margin-right:20px;
+  }
+
+  .footer-content {
+    display:grid;
+    grid-template: 100%/8fr 1fr;
+    grid-template-areas: "i b";
+  }
+
+  .text-input {
+    margin-left:30px;
+    margin-right:30px;
+    grid-area:i;
+  }
+
+  .send {
+    justify-self:center;
+    padding-left:15px;
+    padding-right:15px;
+    grid-area:b;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header></header>
+    
+    <menu class="grid-menu">
+      <div class="m1">1</div>
+      <div class="m2">2</div>
+      <div class="m3">3</div>
+    </menu>
+    
+    <main class="main-content">
+      <div class="received">Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce?Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? Oi, como vai voce? 23</div>
+      <div class="received">Ta ok?</div>
+      <div class="sent">To bem e voce?</div>
+      <div class="received">To otimo tb!</div>
+    </main>
+    
+    <footer class="footer-content">
+        <input class="text-input" type="text" value="teste de nvio" />
+        <button class="send">Enviar</button>
+    </footer>
+    
+  </div>
+</body>
+</html>
